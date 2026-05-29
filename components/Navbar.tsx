@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 
 const links = [
@@ -17,9 +18,15 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-black/5 bg-white/95 shadow-sm backdrop-blur">
       <nav className="container-page flex h-20 items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link href="/" className="flex items-baseline gap-1 leading-none" onClick={() => setOpen(false)}>
-          <span className="font-black text-red-600 tracking-tight text-3xl">ACC</span>
-          <span className="text-xs font-semibold text-gray-500 tracking-widest ml-1">LOGISTIC</span>
+        <Link href="/" className="flex items-center" onClick={() => setOpen(false)}>
+          <Image
+            src="/logo-navbar.png"
+            alt="ACC Logistic"
+            width={140}
+            height={48}
+            priority
+            className="h-10 w-auto object-contain"
+          />
         </Link>
         <div className="hidden items-center gap-8 md:flex">
           {links.map((link) => (
