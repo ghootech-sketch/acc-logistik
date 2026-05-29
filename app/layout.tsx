@@ -11,7 +11,27 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://acc-logistik.vercel.app'),
   title: 'ACC Logistic — Door to Door Cargo Jakarta-Sumatera',
   description: 'Jasa pengiriman kargo terpercaya dari Jakarta ke Medan, Padang, Pekanbaru, Aceh, dan seluruh Sumatera. Murah, Aman, Cepat, Tepat.',
-  openGraph: { images: ['/assets/banner-acc.png'] },
+  icons: {
+    icon: '/logofavicon.png',
+    shortcut: '/logofavicon.png',
+    apple: '/logofavicon.png',
+  },
+  openGraph: {
+    title: 'ACC Logistic — Door to Door Cargo Jakarta-Sumatera',
+    description: 'Jasa pengiriman kargo terpercaya dari Jakarta ke Medan, Padang, Pekanbaru, Aceh, dan seluruh Sumatera. Murah, Aman, Cepat, Tepat.',
+    url: 'https://acc-logistik.vercel.app',
+    siteName: 'ACC Logistic',
+    images: [
+      {
+        url: '/ogimage.png',
+        width: 1200,
+        height: 630,
+        alt: 'ACC Logistic — Door to Door Cargo Jakarta-Sumatera',
+      },
+    ],
+    locale: 'id_ID',
+    type: 'website',
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
