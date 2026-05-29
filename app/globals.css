@@ -4,7 +4,7 @@
 
 :root {
   color: #1A1A1A;
-  background: #FFFDE7;
+  background: #FFFFFF;
 }
 
 html {
@@ -12,18 +12,12 @@ html {
 }
 
 body {
-  background: #FFFDE7;
+  background: #FFFFFF;
 }
 
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 .section-padding {
@@ -35,13 +29,13 @@ body {
 }
 
 .btn-primary {
-  @apply inline-flex items-center justify-center rounded-lg bg-brand-red px-6 py-3 font-semibold text-white shadow-md transition hover:-translate-y-0.5 hover:bg-red-700;
+  @apply inline-flex items-center justify-center rounded-lg bg-brand-yellow px-6 py-3 font-bold text-brand-black shadow-yellow transition hover:-translate-y-0.5 hover:bg-yellow-400;
 }
 
 .btn-secondary {
-  @apply inline-flex items-center justify-center rounded-lg border-2 border-brand-red px-6 py-3 font-semibold text-brand-red transition hover:-translate-y-0.5 hover:bg-brand-red hover:text-white;
+  @apply inline-flex items-center justify-center rounded-lg border-2 border-brand-yellow px-6 py-3 font-bold text-brand-yellow transition hover:-translate-y-0.5 hover:bg-brand-yellow hover:text-brand-black;
 }
 
 .card {
-  @apply rounded-xl bg-white p-6 shadow-md transition hover:-translate-y-1 hover:shadow-lg;
+  @apply rounded-xl bg-white p-6 shadow-md transition hover:-translate-y-1 hover:shadow-lg border border-gray-100;
 }
