@@ -6,10 +6,12 @@ const config: Config = {
     extend: {
       colors: {
         brand: {
-          red: '#D32F2F',
           yellow: '#F9A825',
+          'yellow-light': '#FDD835',
+          red: '#D32F2F',
           dark: '#1A1A1A',
-          cream: '#FFFDE7',
+          black: '#111111',
+          white: '#FFFFFF',
         },
       },
       fontFamily: {
@@ -17,6 +19,7 @@ const config: Config = {
       },
       boxShadow: {
         soft: '0 18px 45px rgba(0,0,0,0.08)',
+        yellow: '0 8px 30px rgba(249,168,37,0.35)',
       },
     },
   },
