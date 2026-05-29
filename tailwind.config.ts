@@ -12,6 +12,9 @@ const config: Config = {
           cream: '#FFFDE7',
         },
       },
+      fontFamily: {
+        sans: ['Poppins', 'sans-serif'],
+      },
       boxShadow: {
         soft: '0 18px 45px rgba(0,0,0,0.08)',
       },

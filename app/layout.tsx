@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
-import { Inter, Poppins } from 'next/font/google';
+import { Poppins } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import FloatingWA from '@/components/FloatingWA';
 
-const poppins = Poppins({ subsets: ['latin'], weight: ['600', '700', '800', '900'], variable: '--font-poppins' });
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
+const poppins = Poppins({ subsets: ['latin'], weight: ['400', '600', '700', '800', '900'] });
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://acc-logistik.vercel.app'),
@@ -16,11 +16,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="id" className={`${poppins.variable} ${inter.variable}`}>
-      <body className="font-sans antialiased">
+    <html lang="id">
+      <body className={`${poppins.className} antialiased`}>
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <FloatingWA />
       </body>
     </html>
   );
