@@ -1,4 +1,4 @@
-'use client';
+use client';
 
 import Link from 'next/link';
 import Image from 'next/image';
@@ -8,6 +8,9 @@ const links = [
   { href: '/', label: 'Beranda' },
   { href: '/layanan', label: 'Layanan' },
   { href: '/rute', label: 'Rute' },
+  { href: '/blog', label: 'Blog' },
+  { href: '/tentang', label: 'Tentang' },
+  { href: '/faq', label: 'FAQ' },
   { href: '/ulasan', label: 'Ulasan' },
   { href: '/kontak', label: 'Kontak' },
 ];
@@ -28,7 +31,7 @@ export default function Navbar() {
             className="h-10 w-auto object-contain"
           />
         </Link>
-        <div className="hidden items-center gap-8 md:flex">
+        <div className="hidden items-center gap-5 lg:gap-7 md:flex">
           {links.map((link) => (
             <Link
               key={link.href}
@@ -39,7 +42,7 @@ export default function Navbar() {
             </Link>
           ))}
         </div>
-        <Link href="/kontak" className="btn-primary hidden md:inline-flex">
+        <Link href="/kontak" className="btn-primary hidden xl:inline-flex">
           Hubungi Kami
         </Link>
         <button
